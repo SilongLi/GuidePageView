@@ -1,0 +1,86 @@
+desc '使用ManagerLibs脚本，可以对自己的私有库进行快速的升级维护。'
+desc '使用脚本命令组成（ManagerLibs为我的脚本名称），接收四个参数: fastlane ManagerLibs tag:[版本号] message:"[本次升级的日志]" repo:[私有库名称] podspec:[podspec名称]'
+desc '案例：fastlane ManagerLibs tag:[1.0.0] message:"封装私有库" repo:BruceLiLibs  podspec: fastlaneDemo'
+
+lane :ManagerLibs do |options|
+# ManagerLibs是fastlane脚本名称，options是接收的参数字典集合
+
+
+# 参数列表
+
+# tag版本号
+tagName = options[:tag]   
+
+# message: 提交日志
+message = options[:message]
+
+# repo 私有库存放的库的名称
+repoName = options[:repo]
+
+# 项目的podspec名称
+podspecName = options[:podspec]
+
+
+# 1. pod install
+
+cocoapods(
+  clean: true,
+  podfile: "./Example/Podfile"
+)
+
+# 我习惯先执行本地验证操作，这样有问题了可以先需改完成，这样提交的时候，看到的是同一个commit。
+#  本地验证： pod lib lint xxx.podspec --allow-warnings
+
+pod_lib_lint(allow_warnings: true)
+
+
+# 提交代码命令
+# 2. git add .  
+
+git_add(path: ".") 
+
+
+#   git commit -m "xxx"
+
+git_commit(path: ".", message: message)
+
+
+# git pull origin master
+
+git_pull
+
+
+#   git push origin master
+
+push_to_git_remote
+
+
+# 3. 验证标签tag是否存在，如果存在，需要删除本地和远程标签
+# 删除本地标签 git tag -d xxx
+# 删除远程标签 git push origin :xxx
+
+if git_tag_exists(tag: tagName)
+  UI.message("从远程仓库中查找到版本号为：#{tagName} 的版本，即将执行本地和远程删除标签操作。")
+  remove_tag(tag: tagName)
+end
+
+
+# 提交新的标签
+# 4. git tag -a xxx  
+
+add_git_tag(
+  tag: tagName
+)
+
+
+# git push origin --tag
+
+push_git_tags
+
+
+# 提交私有库信息
+# 5. 提交私有库 pod repo push BruceLiLibs  xxx.podspec --allow-warnings
+
+pod_repo_push(repo: repoName, podspec: podspecName)
+
+end

@@ -1,0 +1,16 @@
+PODS:
+  - GuidePageView (1.0.0)
+
+DEPENDENCIES:
+  - GuidePageView (from `../`)
+
+EXTERNAL SOURCES:
+  GuidePageView:
+    :path: ../
+
+SPEC CHECKSUMS:
+  GuidePageView: 0e7050630825c365774dc822ccdea8e33102c278
+
+PODFILE CHECKSUM: f41042f8fbad75ce385adfb8277f54aff553bbf0
+
+COCOAPODS: 1.4.0

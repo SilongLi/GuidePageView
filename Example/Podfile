@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'GuidePageView_Example' do
+  pod 'GuidePageView', :path => '../'
+
+  target 'GuidePageView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

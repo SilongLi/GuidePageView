@@ -1,0 +1,6 @@
+framework module GuidePageView {
+  umbrella header "GuidePageView-umbrella.h"
+
+  export *
+  module * { export * }
+}

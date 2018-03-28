@@ -21,13 +21,19 @@ public class GuidePageView: UIView {
         view.delegate = self
         return view
     }()
-    private lazy var pageControl: UIPageControl = {
-        var page = UIPageControl.init()
-        page.currentPage = 0
-        page.pageIndicatorTintColor = UIColor.gray
-        page.currentPageIndicatorTintColor = UIColor.white
-        return page
+    
+    /// 指示器
+    public lazy var pageControl: PageControl = {
+        var pageControl = PageControl()
+        let size = CGSize(width: 15.0, height: 3.0)
+        let normalImage = creatImage(color: UIColor(white: 0.0, alpha: 0.1), size: size)
+        let selectedImage = creatImage(color: UIColor(red: 198.0/255.0, green: 165.0/255.0, blue: 111.0/255.0, alpha: 1.0), size: size)
+        pageControl.setImage(normalImage, for: .normal)
+        pageControl.setImage(selectedImage, for: .selected)
+        pageControl.itemSpacing = 14.0
+        return pageControl
     }()
+    
     /// 跳过按钮
     public lazy var skipButton: UIButton = {
         let btn = UIButton.init(type: .custom)
@@ -45,11 +51,10 @@ public class GuidePageView: UIView {
     public lazy var logtinButton: UIButton = {
         let btn = UIButton.init(type: .custom)
         btn.setTitle("注册/登录", for: .normal)
-        btn.titleLabel?.font = UIFont.systemFont(ofSize: 16)
+        btn.titleLabel?.font = UIFont.systemFont(ofSize: 15)
         btn.setTitleColor(UIColor.white, for: .normal)
         btn.titleLabel?.sizeToFit()
-        btn.setBackgroundImage(imageFromBundle(name: "start_btn_bg.png"), for: .normal)
-        btn.setTitleColor(UIColor.lightGray, for: .normal)
+        btn.backgroundColor = UIColor.init(red: 177.0/255.0, green: 126.0/255.0, blue: 71.0/255.0, alpha: 1.0)
         btn.addTarget(self, action: #selector(loginBtnClicked), for: .touchUpInside)
         return btn
     }()
@@ -58,7 +63,7 @@ public class GuidePageView: UIView {
         let btn = UIButton.init(type: .custom)
         btn.setTitle("随便看看 ＞", for: .normal)
         btn.titleLabel?.font = UIFont.systemFont(ofSize: 13)
-        btn.setTitleColor(UIColor.white, for: .normal)
+        btn.setTitleColor(UIColor.init(red: 177.0/255.0, green: 126.0/255.0, blue: 71.0/255.0, alpha: 1.0), for: .normal)
         btn.titleLabel?.sizeToFit()
         btn.addTarget(self, action: #selector(startBtnClicked), for: .touchUpInside)
         return btn
@@ -68,7 +73,7 @@ public class GuidePageView: UIView {
     var loginCompletion: (() -> ())?
     let pageControlHeight: CGFloat = 40.0
     let startHeigth: CGFloat = 30.0
-    let loginHeight: CGFloat = 50.0
+    let loginHeight: CGFloat = 40.0
     
     // MARK: - life cycle
     private override init(frame: CGRect) {
@@ -85,11 +90,11 @@ public class GuidePageView: UIView {
     ///   - loginRegistCompletion: 登录/注册回调
     ///   - startCompletion: 立即体验回调
     public convenience init(frame: CGRect = UIScreen.main.bounds,
-                     images: Array<String>,
-                     isHiddenSkipBtn: Bool = false,
-                     isHiddenStartBtn: Bool = false,
-                     loginRegistCompletion: (() -> ())?,
-                     startCompletion: (() -> ())?) {
+                            images: Array<String>,
+                            isHiddenSkipBtn: Bool = false,
+                            isHiddenStartBtn: Bool = false,
+                            loginRegistCompletion: (() -> ())?,
+                            startCompletion: (() -> ())?) {
         self.init(frame: frame)
         
         self.imageArray       = images
@@ -113,11 +118,11 @@ public class GuidePageView: UIView {
         guideScrollView.contentSize = CGSize.init(width: frame.size.width * CGFloat(imageArray?.count ?? 0), height: frame.size.height)
         self.addSubview(guideScrollView)
         
-        skipButton.frame = CGRect.init(x: size.width - 80.0 , y: 30.0, width: 50.0, height: 24.0)
+        skipButton.frame = CGRect.init(x: size.width - 70.0 , y: 40.0, width: 50.0, height: 24.0)
         skipButton.isHidden = isHiddenSkipBtn
         self.addSubview(skipButton)
         
-        pageControl.frame = CGRect.init(x: 0.0, y: size.height - pageControlHeight, width: size.width, height: pageControlHeight)
+        pageControl.frame = CGRect(x: 0.0, y: size.height - pageControlHeight, width: size.width, height: pageControlHeight)
         pageControl.numberOfPages = imageArray?.count ?? 0
         self.addSubview(pageControl)
         
@@ -134,6 +139,7 @@ public class GuidePageView: UIView {
             } else {                    // 其它图片
                 // Warning: 假如说图片是放在Assets中的，使用Bundle的方式加载不到，需要使用init(named:)方法加载。
                 view = UIImageView.init(frame: imageFrame)
+                view.contentMode = .scaleAspectFill
                 (view as! UIImageView).image = (data != nil ? UIImage.init(data: data!) : UIImage.init(named: name))
             }
             // 添加“立即体验”按钮和登录/注册按钮
@@ -155,42 +161,40 @@ public class GuidePageView: UIView {
             guideScrollView.addSubview(view)
         }
     }
-
+    
     // MARK: - actions
-    private func removeGuideViewFromSupview(_ completion: (() -> ())?) {
+    private func removeGuideViewFromSupview() {
         UIView.animate(withDuration: 1.0, delay: 0, options: UIViewAnimationOptions.curveEaseOut, animations: {
             self.alpha = 0.0
         }) { (_) in
             self.removeFromSuperview()
-            if completion != nil {
-                completion!()
-            }
         }
     }
     
     /// 点击“跳过”按钮事件，立即退出引导页
     @objc private func skipBtnClicked() {
-        self.removeGuideViewFromSupview {
-            if self.startCompletion != nil {
-                self.startCompletion!()
-            }
+        if self.startCompletion != nil {
+            self.startCompletion!()
         }
+        self.removeGuideViewFromSupview()
     }
     
     /// 点击“立即体验”按钮事件，退出引导页
     @objc private func startBtnClicked() {
-        self.removeGuideViewFromSupview {
-            if self.startCompletion != nil {
-                self.startCompletion!()
-            }
+        if self.startCompletion != nil {
+            self.startCompletion!()
         }
+        self.removeGuideViewFromSupview()
     }
     
     /// 点击登录注册按钮
     @objc private func loginBtnClicked() {
-        self.removeGuideViewFromSupview {
-            if self.loginCompletion != nil {
-                self.loginCompletion!()
+        if self.loginCompletion != nil {
+            self.loginCompletion!()
+        }
+        DispatchQueue.global().asyncAfter(deadline: DispatchTime.now() + 1.5) {
+            DispatchQueue.main.async {
+                self.removeGuideViewFromSupview()
             }
         }
     }
@@ -206,6 +210,23 @@ public class GuidePageView: UIView {
         let image = UIImage(named: String(name), in: bundle, compatibleWith: nil)
         return image!
     }
+    
+    /// 根据UIColor创建UIImage
+    ///
+    /// - Parameters:
+    ///   - color: 颜色
+    ///   - size: 图片大小
+    /// - Returns: 图片
+    private func creatImage(color: UIColor, size: CGSize = CGSize.init(width: 100, height: 100)) -> UIImage {
+        let size = (size == CGSize.zero ? CGSize(width: 100, height: 100): size)
+        UIGraphicsBeginImageContext(size)
+        let context = UIGraphicsGetCurrentContext()
+        context!.setFillColor(color.cgColor)
+        context!.fill(CGRect.init(x: 0, y: 0, width: size.width, height: size.height))
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image!
+    }
 }
 
 // MARK: - <UIScrollViewDelegate>
@@ -215,12 +236,13 @@ extension GuidePageView: UIScrollViewDelegate {
         // 设置指示器
         pageControl.currentPage = page
         
-        // 显示“立即体验”按钮 
+        // 显示“立即体验”按钮
         if !isHiddenStartBtn, (imageArray?.count ?? 0) - 1 == page {
-            UIView.animate(withDuration: 1.25, animations: {
+            UIView.animate(withDuration: 1.0, animations: {
                 self.startButton.alpha  = 1.0
                 self.logtinButton.alpha = 1.0
             })
         }
     }
 }
+

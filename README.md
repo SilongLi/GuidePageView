@@ -17,6 +17,9 @@ App启动引导页，支持播放gif/png/jpg等类型的资源数组。
 ### 实例化接口及可配置参数
 
 ```Swift
+/// 指示器
+public lazy var pageControl: PageControl
+
 /// 跳过按钮
 public lazy var skipButton: UIButton { get set }
 
@@ -36,13 +39,19 @@ public lazy var logtinButton: UIButton { get set }
 ///   - loginRegistCompletion: 登录/注册回调
 ///   - startCompletion: 立即体验回调
 public convenience init(frame: CGRect = UIScreen.main.bounds,
-                        images: Array<String>,
-                isHiddenSkipBtn: Bool = false,
-                isHiddenStartBtn: Bool = false,
-                loginRegistCompletion: (() -> ())?,
-                startCompletion: (() -> ())?)
+images: Array<String>,
+isHiddenSkipBtn: Bool = false,
+isHiddenStartBtn: Bool = false,
+loginRegistCompletion: (() -> ())?,
+startCompletion: (() -> ())?)
 
 ```
+
+### 新增控件
+#### PageControl（指示器）
+- 通过(setImage:forState:)方法可以设置指示器的默认和选中样式；
+- 通过itemSpacing属性可以设置指示器之间的间距；
+- 。。。（具体的可看源码）
 
 ## Example
 

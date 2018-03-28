@@ -7,19 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1869F1C54E835284D9D0982800768CD6 /* GifImageOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D292BFCB0579F60C70DE07EB905762 /* GifImageOperation.swift */; };
 		18D30DC71963F0295D18B2EB9E6E4AFA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		223EDB84B07B230C7B7810658FFE5E10 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
 		25712C8F04E7C82D11F45669A424919E /* Pods-GuidePageView_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FB3F4D2EA8CC92A84855D27356814A9 /* Pods-GuidePageView_Tests-dummy.m */; };
-		3675E6B13219E646409F9E1FE769CCD0 /* GuidePageView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7459B6A880C9B7B88E08BB92CE3C7EFE /* GuidePageView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C5EA99689DAF81BCEEBCD63F748FBAD /* GifImageOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DFE308A37712626C7BE4D4582F1A08 /* GifImageOperation.swift */; };
+		5415EBCB34F82C3C436C43F598A3A4AF /* GuideImage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ACBDB7A1D1CC55DC5020EAB3DDA1A092 /* GuideImage.bundle */; };
 		5AE912621C9BDB9D7C914EFFAACC838F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
-		91AE9EF837F28C1207AEDDD9D0AD66AF /* GuideImage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C7DBF2785E565AC7BF1F6C1AA22BAD1C /* GuideImage.bundle */; };
+		6DA4749EEC51A19676A25628ADADD012 /* GuidePageView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 59701CE15C7669EC128342925ADEBB59 /* GuidePageView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		88FD24981ECB35418A7062C148192ACC /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691CF690F3DCA13A8D7D494C2290DC0A /* PageControl.swift */; };
+		9B279E9A278A684780553C38D72D5EA9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
 		A7D0B6B8F42807D69C8F385C76130DD2 /* Pods-GuidePageView_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 931E9A47F0CF2DDFB2ADCF61D0C07F5F /* Pods-GuidePageView_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B1DBEE96103B40ABFADCDE3CEB05B20A /* GuidePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8300D0DBFE236A170E6B617E30A5ECB8 /* GuidePageView.swift */; };
-		BE0B40CAE7EFF6639987964FEFAEC615 /* GuidePageView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3590150D9DB454858DE893E73DF37FDE /* GuidePageView-dummy.m */; };
 		CE81FE826338FC126276E079F7E0BC43 /* Pods-GuidePageView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 18B089020C42ECA723F4E93C8C75ED1E /* Pods-GuidePageView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D40F31F28F584CC44A7CD95948D7AD81 /* GuidePageView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7A8D7C15DE7E12BE2CB549FC2394BF /* GuidePageView-dummy.m */; };
 		E3DC053358D74EE6E7EE336DF3B8FC1D /* Pods-GuidePageView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C86A1F7C8936C2E68E0AFD7D0DFB732C /* Pods-GuidePageView_Example-dummy.m */; };
-		F67F02DCAC9CE8E01E5359812114D3D8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
-		FBCFCCE59613922B438717795801050E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		FFFED15BCEDCA69747E214A718CCA69D /* GuidePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202BAFE3A9572B63FC015D651749BC1A /* GuidePageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,46 +28,47 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A2AA3DF299392C8F7E2EBCBCF10B4625;
+			remoteGlobalIDString = CDEDD18BD654FB04FAFB4A040051BF64;
 			remoteInfo = GuidePageView;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		02E635C0A88ACB730198B17BFEB09DC3 /* Pods-GuidePageView_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-GuidePageView_Tests.modulemap"; sourceTree = "<group>"; };
-		08D292BFCB0579F60C70DE07EB905762 /* GifImageOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GifImageOperation.swift; path = GuidePageView/Classes/GifImageOperation.swift; sourceTree = "<group>"; };
-		0ABDDBC08AEB7844F4BFA06E5B067D00 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		03D730136EB29E91223322438014AA6D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		0BC0F16BC9A13D7C3AF0B76E1685CEAC /* GuidePageView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = GuidePageView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		1111A87A33BF32BA17197D8B30FA439A /* Pods-GuidePageView_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GuidePageView_Example-resources.sh"; sourceTree = "<group>"; };
+		133C296821677CF00C7DC201957FD844 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18B089020C42ECA723F4E93C8C75ED1E /* Pods-GuidePageView_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GuidePageView_Tests-umbrella.h"; sourceTree = "<group>"; };
+		202BAFE3A9572B63FC015D651749BC1A /* GuidePageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GuidePageView.swift; path = GuidePageView/Classes/GuidePageView.swift; sourceTree = "<group>"; };
 		224E954BCF90102A75AFD6D5CA9F1055 /* Pods-GuidePageView_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GuidePageView_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		29EE563A63C8766382FFDCA2AACF0D11 /* Pods_GuidePageView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GuidePageView_Tests.framework; path = "Pods-GuidePageView_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3590150D9DB454858DE893E73DF37FDE /* GuidePageView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GuidePageView-dummy.m"; sourceTree = "<group>"; };
 		3FB80BEF929CE004F94B66C68C36D802 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C6E4C4DB150D6C16DDC8818CBC595CB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		4EFE91B7CF631691A62824820E827B40 /* Pods-GuidePageView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GuidePageView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		6FA59AB3133495267C81511D592735A3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7459B6A880C9B7B88E08BB92CE3C7EFE /* GuidePageView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GuidePageView-umbrella.h"; sourceTree = "<group>"; };
-		7D4246D0E56D711DC9D7C24D5996F218 /* GuidePageView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = GuidePageView.modulemap; sourceTree = "<group>"; };
-		8300D0DBFE236A170E6B617E30A5ECB8 /* GuidePageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GuidePageView.swift; path = GuidePageView/Classes/GuidePageView.swift; sourceTree = "<group>"; };
+		59701CE15C7669EC128342925ADEBB59 /* GuidePageView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GuidePageView-umbrella.h"; sourceTree = "<group>"; };
+		691CF690F3DCA13A8D7D494C2290DC0A /* PageControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageControl.swift; path = GuidePageView/Classes/PageControl.swift; sourceTree = "<group>"; };
+		87DFE308A37712626C7BE4D4582F1A08 /* GifImageOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GifImageOperation.swift; path = GuidePageView/Classes/GifImageOperation.swift; sourceTree = "<group>"; };
 		8F16E20F6028D2B7DAE33A6956BFAFBA /* Pods-GuidePageView_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GuidePageView_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9262A119B225F0FC5D11B369EFCA19D3 /* GuidePageView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = GuidePageView.modulemap; sourceTree = "<group>"; };
 		931E9A47F0CF2DDFB2ADCF61D0C07F5F /* Pods-GuidePageView_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GuidePageView_Example-umbrella.h"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		990C4D3532A6212130694064090AAA3F /* GuidePageView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GuidePageView.framework; path = GuidePageView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FB3F4D2EA8CC92A84855D27356814A9 /* Pods-GuidePageView_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GuidePageView_Tests-dummy.m"; sourceTree = "<group>"; };
-		A1E34F6BB268E42C1ABF89BC2674B419 /* GuidePageView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GuidePageView.xcconfig; sourceTree = "<group>"; };
 		A6BB7A13CA47DDEF9C08FDCE07810C11 /* Pods_GuidePageView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GuidePageView_Example.framework; path = "Pods-GuidePageView_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A9E90C23F035E9C74BF94E551FCC389D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		AC70FC71ECEF15F2AE2FDB43CD162CF8 /* GuidePageView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = GuidePageView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		B10F2D88DB9B6B8F041A520BA3D15C00 /* GuidePageView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GuidePageView-prefix.pch"; sourceTree = "<group>"; };
+		ACBDB7A1D1CC55DC5020EAB3DDA1A092 /* GuideImage.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GuideImage.bundle; path = GuidePageView/GuideImage.bundle; sourceTree = "<group>"; };
+		AD7A8D7C15DE7E12BE2CB549FC2394BF /* GuidePageView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GuidePageView-dummy.m"; sourceTree = "<group>"; };
 		B26379BC05CBAE052A957FD6EA461FD4 /* Pods-GuidePageView_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GuidePageView_Example-frameworks.sh"; sourceTree = "<group>"; };
 		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		B972C0D11C71E23D33110C6420ADC26B /* Pods-GuidePageView_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GuidePageView_Tests-resources.sh"; sourceTree = "<group>"; };
 		BFE032B06DA358DDB9D95F977C733DA9 /* Pods-GuidePageView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GuidePageView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		C3256857623DBA96FAD8E394C72EA212 /* Pods-GuidePageView_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GuidePageView_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		C7DBF2785E565AC7BF1F6C1AA22BAD1C /* GuideImage.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GuideImage.bundle; path = GuidePageView/GuideImage.bundle; sourceTree = "<group>"; };
 		C86A1F7C8936C2E68E0AFD7D0DFB732C /* Pods-GuidePageView_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GuidePageView_Example-dummy.m"; sourceTree = "<group>"; };
 		D000B362DB1C8C089DE66DF570180EE1 /* Pods-GuidePageView_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GuidePageView_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		D603CCFDA60CA9D9F99D08FBE1FAB0EA /* Pods-GuidePageView_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-GuidePageView_Example.modulemap"; sourceTree = "<group>"; };
+		D67545FBE39E8C37397BBD4A3D81A38A /* GuidePageView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GuidePageView-prefix.pch"; sourceTree = "<group>"; };
 		D6EB267317773C47537BF27AF75D4A10 /* Pods-GuidePageView_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GuidePageView_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D6EFC82AFB2CE982992EAB4D33A8DC95 /* GuidePageView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GuidePageView.xcconfig; sourceTree = "<group>"; };
 		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		E6A14E4771AFC6245DFB1905AB045E52 /* Pods-GuidePageView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GuidePageView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		EF7C625361FFD4EB27079F085C99D174 /* Pods-GuidePageView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GuidePageView_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -90,12 +92,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E6107E5621A3236858BE5BA7B90959DE /* Frameworks */ = {
+		F41DEFB8BAA08C3E0DCC6A43B9609F68 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBCFCCE59613922B438717795801050E /* Foundation.framework in Frameworks */,
-				F67F02DCAC9CE8E01E5359812114D3D8 /* UIKit.framework in Frameworks */,
+				223EDB84B07B230C7B7810658FFE5E10 /* Foundation.framework in Frameworks */,
+				9B279E9A278A684780553C38D72D5EA9 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,30 +120,6 @@
 			);
 			name = "Pods-GuidePageView_Example";
 			path = "Target Support Files/Pods-GuidePageView_Example";
-			sourceTree = "<group>";
-		};
-		1EFBC49A25F373E487C5BA30EE9F8889 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				7D4246D0E56D711DC9D7C24D5996F218 /* GuidePageView.modulemap */,
-				A1E34F6BB268E42C1ABF89BC2674B419 /* GuidePageView.xcconfig */,
-				3590150D9DB454858DE893E73DF37FDE /* GuidePageView-dummy.m */,
-				B10F2D88DB9B6B8F041A520BA3D15C00 /* GuidePageView-prefix.pch */,
-				7459B6A880C9B7B88E08BB92CE3C7EFE /* GuidePageView-umbrella.h */,
-				6FA59AB3133495267C81511D592735A3 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/GuidePageView";
-			sourceTree = "<group>";
-		};
-		2AAFEC023CC1A408D5641AAF2F330D72 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				AC70FC71ECEF15F2AE2FDB43CD162CF8 /* GuidePageView.podspec */,
-				A9E90C23F035E9C74BF94E551FCC389D /* LICENSE */,
-				0ABDDBC08AEB7844F4BFA06E5B067D00 /* README.md */,
-			);
-			name = Pod;
 			sourceTree = "<group>";
 		};
 		2BB629CB309DAF9AC375651A22CDD0A6 /* Products */ = {
@@ -193,19 +171,11 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				9B538F8D258E7B86D3F849FAAFE7AA3E /* Development Pods */,
+				C448917AB61404CB28F8D54D6B503287 /* Development Pods */,
 				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
 				2BB629CB309DAF9AC375651A22CDD0A6 /* Products */,
 				B8B9EE9CD45AE00FF0DB809076EBF4D9 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		9B538F8D258E7B86D3F849FAAFE7AA3E /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E95FDB10E142075C1D37F654070643FA /* GuidePageView */,
-			);
-			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		B8B9EE9CD45AE00FF0DB809076EBF4D9 /* Targets Support Files */ = {
@@ -217,25 +187,58 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		E95FDB10E142075C1D37F654070643FA /* GuidePageView */ = {
+		C0EA1C085E14267C2C37B5F15FAA3BD0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				08D292BFCB0579F60C70DE07EB905762 /* GifImageOperation.swift */,
-				8300D0DBFE236A170E6B617E30A5ECB8 /* GuidePageView.swift */,
-				2AAFEC023CC1A408D5641AAF2F330D72 /* Pod */,
-				F3C88F8EA89E383FAB1EA03EC52D514E /* Resources */,
-				1EFBC49A25F373E487C5BA30EE9F8889 /* Support Files */,
+				ACBDB7A1D1CC55DC5020EAB3DDA1A092 /* GuideImage.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C448917AB61404CB28F8D54D6B503287 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ED504CDF6A9A046AC11A416AE7A24296 /* GuidePageView */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		CF7F58B985C138B5C67108D360DB50C9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9262A119B225F0FC5D11B369EFCA19D3 /* GuidePageView.modulemap */,
+				D6EFC82AFB2CE982992EAB4D33A8DC95 /* GuidePageView.xcconfig */,
+				AD7A8D7C15DE7E12BE2CB549FC2394BF /* GuidePageView-dummy.m */,
+				D67545FBE39E8C37397BBD4A3D81A38A /* GuidePageView-prefix.pch */,
+				59701CE15C7669EC128342925ADEBB59 /* GuidePageView-umbrella.h */,
+				133C296821677CF00C7DC201957FD844 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/GuidePageView";
+			sourceTree = "<group>";
+		};
+		E08A01B60C06FD8BBB42FB279F978C57 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				0BC0F16BC9A13D7C3AF0B76E1685CEAC /* GuidePageView.podspec */,
+				03D730136EB29E91223322438014AA6D /* LICENSE */,
+				4C6E4C4DB150D6C16DDC8818CBC595CB /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		ED504CDF6A9A046AC11A416AE7A24296 /* GuidePageView */ = {
+			isa = PBXGroup;
+			children = (
+				87DFE308A37712626C7BE4D4582F1A08 /* GifImageOperation.swift */,
+				202BAFE3A9572B63FC015D651749BC1A /* GuidePageView.swift */,
+				691CF690F3DCA13A8D7D494C2290DC0A /* PageControl.swift */,
+				E08A01B60C06FD8BBB42FB279F978C57 /* Pod */,
+				C0EA1C085E14267C2C37B5F15FAA3BD0 /* Resources */,
+				CF7F58B985C138B5C67108D360DB50C9 /* Support Files */,
 			);
 			name = GuidePageView;
 			path = ../..;
-			sourceTree = "<group>";
-		};
-		F3C88F8EA89E383FAB1EA03EC52D514E /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				C7DBF2785E565AC7BF1F6C1AA22BAD1C /* GuideImage.bundle */,
-			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,11 +260,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F9E1920EA7B5FEC742CBA6D1D0CC4DA2 /* Headers */ = {
+		EEE30727CD6763C88DE1E7FBED57D8EF /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3675E6B13219E646409F9E1FE769CCD0 /* GuidePageView-umbrella.h in Headers */,
+				6DA4749EEC51A19676A25628ADADD012 /* GuidePageView-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,14 +288,14 @@
 			productReference = 29EE563A63C8766382FFDCA2AACF0D11 /* Pods_GuidePageView_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		A2AA3DF299392C8F7E2EBCBCF10B4625 /* GuidePageView */ = {
+		CDEDD18BD654FB04FAFB4A040051BF64 /* GuidePageView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0D4861FF488FEB2DF3099DD8FD3B11AE /* Build configuration list for PBXNativeTarget "GuidePageView" */;
+			buildConfigurationList = 0C43E21C3A0CC6CE01627437208AB281 /* Build configuration list for PBXNativeTarget "GuidePageView" */;
 			buildPhases = (
-				1BA5D476F85F9A8D7B9D2D914438E518 /* Sources */,
-				E6107E5621A3236858BE5BA7B90959DE /* Frameworks */,
-				F151B41E0A21B52BE6D0E09424156AF1 /* Resources */,
-				F9E1920EA7B5FEC742CBA6D1D0CC4DA2 /* Headers */,
+				532577FB4FF0F5C89FE1C1A4A037F66C /* Sources */,
+				F41DEFB8BAA08C3E0DCC6A43B9609F68 /* Frameworks */,
+				63ACF62913094046ADC088DD0189D73E /* Resources */,
+				EEE30727CD6763C88DE1E7FBED57D8EF /* Headers */,
 			);
 			buildRules = (
 			);
@@ -342,7 +345,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A2AA3DF299392C8F7E2EBCBCF10B4625 /* GuidePageView */,
+				CDEDD18BD654FB04FAFB4A040051BF64 /* GuidePageView */,
 				D640DD23F7D501A9DCE196F632060B0B /* Pods-GuidePageView_Example */,
 				64BDC0CC602A028105F75C41B7AE86FA /* Pods-GuidePageView_Tests */,
 			);
@@ -350,24 +353,25 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F151B41E0A21B52BE6D0E09424156AF1 /* Resources */ = {
+		63ACF62913094046ADC088DD0189D73E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91AE9EF837F28C1207AEDDD9D0AD66AF /* GuideImage.bundle in Resources */,
+				5415EBCB34F82C3C436C43F598A3A4AF /* GuideImage.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1BA5D476F85F9A8D7B9D2D914438E518 /* Sources */ = {
+		532577FB4FF0F5C89FE1C1A4A037F66C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1869F1C54E835284D9D0982800768CD6 /* GifImageOperation.swift in Sources */,
-				BE0B40CAE7EFF6639987964FEFAEC615 /* GuidePageView-dummy.m in Sources */,
-				B1DBEE96103B40ABFADCDE3CEB05B20A /* GuidePageView.swift in Sources */,
+				4C5EA99689DAF81BCEEBCD63F748FBAD /* GifImageOperation.swift in Sources */,
+				D40F31F28F584CC44A7CD95948D7AD81 /* GuidePageView-dummy.m in Sources */,
+				FFFED15BCEDCA69747E214A718CCA69D /* GuidePageView.swift in Sources */,
+				88FD24981ECB35418A7062C148192ACC /* PageControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,7 +397,7 @@
 		6030B84EFB102BEE474D4D76937E05FB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GuidePageView;
-			target = A2AA3DF299392C8F7E2EBCBCF10B4625 /* GuidePageView */;
+			target = CDEDD18BD654FB04FAFB4A040051BF64 /* GuidePageView */;
 			targetProxy = 2B6ED3F6F96A98E6D007D4292690C58F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -432,9 +436,40 @@
 			};
 			name = Release;
 		};
-		233D29972FA5AF065F06E7E506C3B4F8 /* Release */ = {
+		546D2850B9790FF8F6D0FB50A3AD626C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A1E34F6BB268E42C1ABF89BC2674B419 /* GuidePageView.xcconfig */;
+			baseConfigurationReference = D6EFC82AFB2CE982992EAB4D33A8DC95 /* GuidePageView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GuidePageView/GuidePageView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GuidePageView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GuidePageView/GuidePageView.modulemap";
+				PRODUCT_NAME = GuidePageView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		993E4E48AE126D3EEF541891FFDAAB48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6EFC82AFB2CE982992EAB4D33A8DC95 /* GuidePageView.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -463,37 +498,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		51BAD819EB91085E001CF7601B579685 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A1E34F6BB268E42C1ABF89BC2674B419 /* GuidePageView.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/GuidePageView/GuidePageView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/GuidePageView/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/GuidePageView/GuidePageView.modulemap";
-				PRODUCT_NAME = GuidePageView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		B254DAA6CF0CE39F4A3D11B90A7E059A /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -713,11 +717,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0D4861FF488FEB2DF3099DD8FD3B11AE /* Build configuration list for PBXNativeTarget "GuidePageView" */ = {
+		0C43E21C3A0CC6CE01627437208AB281 /* Build configuration list for PBXNativeTarget "GuidePageView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				51BAD819EB91085E001CF7601B579685 /* Debug */,
-				233D29972FA5AF065F06E7E506C3B4F8 /* Release */,
+				546D2850B9790FF8F6D0FB50A3AD626C /* Debug */,
+				993E4E48AE126D3EEF541891FFDAAB48 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

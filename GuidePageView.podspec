@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'GuidePageView'
-    s.version          = '1.0.0'
+    s.version          = '1.1.0'
     
     s.summary          = 'App启动引导页，支持播放gif/png/jpg等类型的资源数组。'
     s.homepage         = 'https://github.com/SilongLi/GuidePageView.git'
@@ -16,6 +16,6 @@ Pod::Spec.new do |s|
     
     s.ios.deployment_target = '8.0'
     s.requires_arc = true
-    s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
+    s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.2' }
     s.frameworks = 'Foundation', 'UIKit'
 end

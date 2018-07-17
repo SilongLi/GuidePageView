@@ -1,16 +1,16 @@
 PODS:
-  - GuidePageView (1.0.0)
+  - GuidePageView (1.1.0)
 
 DEPENDENCIES:
   - GuidePageView (from `../`)
 
 EXTERNAL SOURCES:
   GuidePageView:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  GuidePageView: 0e7050630825c365774dc822ccdea8e33102c278
+  GuidePageView: 274c17981e435552fe6708e704d6cd5fa4aa8b26
 
 PODFILE CHECKSUM: f41042f8fbad75ce385adfb8277f54aff553bbf0
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3

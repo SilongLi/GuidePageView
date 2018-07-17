@@ -52,7 +52,7 @@ public class GifImageOperation: UIView {
                     return
                 }
                 gifDuration += frameDuration.doubleValue
-                let image = UIImage.init(cgImage: imageRef, scale: UIScreen.main.scale, orientation: UIImageOrientation.up)
+                let image = UIImage.init(cgImage: imageRef, scale: UIScreen.main.scale, orientation: UIImage.Orientation.up)
                 images.append(image)
             }
         }

@@ -3,9 +3,16 @@
 App启动引导页，支持播放gif/png/jpg等类型的资源数组。
 
 
-> Swift 4.0
+> Swift 4.2
+>
 > iOS 8.0
-> Xcode 9.0
+>
+> Xcode 10.0
+>
+
+版本：
+1.0.0版本  Xcode 9，  Swift 4.0
+1.1.0版本  Xcode 10，  Swift 4.1~4.2
 
 ## Gif演示：
 

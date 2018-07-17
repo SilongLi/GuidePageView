@@ -164,7 +164,7 @@ public class GuidePageView: UIView {
     
     // MARK: - actions
     private func removeGuideViewFromSupview() {
-        UIView.animate(withDuration: 1.0, delay: 0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+        UIView.animate(withDuration: 1.0, delay: 0, options: UIView.AnimationOptions.curveEaseOut, animations: {
             self.alpha = 0.0
         }) { (_) in
             self.removeFromSuperview()

@@ -259,7 +259,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = 9LB893D6J3;
+						DevelopmentTeam = 8Y32T66G3J;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
@@ -531,12 +531,12 @@
 			baseConfigurationReference = A198972362BC8E49E4591025 /* Pods-GuidePageView_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9LB893D6J3;
+				DEVELOPMENT_TEAM = 8Y32T66G3J;
 				INFOPLIST_FILE = GuidePageView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Dream.GuidePageView;
+				PRODUCT_BUNDLE_IDENTIFIER = com.demo.GuidePageView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.2;
@@ -548,12 +548,12 @@
 			baseConfigurationReference = 7A6D409FE22ACD327C20795A /* Pods-GuidePageView_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9LB893D6J3;
+				DEVELOPMENT_TEAM = 8Y32T66G3J;
 				INFOPLIST_FILE = GuidePageView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Dream.GuidePageView;
+				PRODUCT_BUNDLE_IDENTIFIER = com.demo.GuidePageView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.2;

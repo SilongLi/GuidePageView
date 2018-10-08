@@ -140,6 +140,7 @@ public class GuidePageView: UIView {
                 // Warning: 假如说图片是放在Assets中的，使用Bundle的方式加载不到，需要使用init(named:)方法加载。
                 view = UIImageView.init(frame: imageFrame)
                 view.contentMode = .scaleAspectFill
+                view.clipsToBounds = true
                 (view as! UIImageView).image = (data != nil ? UIImage.init(data: data!) : UIImage.init(named: name))
             }
             // 添加“立即体验”按钮和登录/注册按钮

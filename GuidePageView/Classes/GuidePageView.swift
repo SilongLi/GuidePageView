@@ -9,9 +9,7 @@
 import UIKit
 
 public class GuidePageView: UIView {
-    private var imageArray: Array<String>?
-    private var isHiddenSkipBtn: Bool = false           // 是否隐藏跳过按钮(true 隐藏; false 不隐藏)，default: false
-    private var isHiddenStartBtn: Bool = false          // 是否隐藏立即体验按钮(true 隐藏; false 不隐藏)，default: false
+    
     private lazy var guideScrollView: UIScrollView = {
         let view = UIScrollView.init()
         view.backgroundColor = UIColor.lightGray
@@ -24,10 +22,10 @@ public class GuidePageView: UIView {
     
     /// 指示器
     public lazy var pageControl: PageControl = {
-        var pageControl = PageControl()
         let size = CGSize(width: 15.0, height: 3.0)
-        let normalImage = creatImage(color: UIColor(white: 0.0, alpha: 0.1), size: size)
+        let normalImage   = creatImage(color: UIColor(white: 0.0, alpha: 0.1), size: size)
         let selectedImage = creatImage(color: UIColor(red: 198.0/255.0, green: 165.0/255.0, blue: 111.0/255.0, alpha: 1.0), size: size)
+        var pageControl = PageControl()
         pageControl.setImage(normalImage, for: .normal)
         pageControl.setImage(selectedImage, for: .selected)
         pageControl.itemSpacing = 14.0
@@ -47,6 +45,7 @@ public class GuidePageView: UIView {
         btn.addTarget(self, action: #selector(skipBtnClicked), for: .touchUpInside)
         return btn
     }()
+    
     /// 登录注册按钮
     public lazy var logtinButton: UIButton = {
         let btn = UIButton.init(type: .custom)
@@ -58,6 +57,7 @@ public class GuidePageView: UIView {
         btn.addTarget(self, action: #selector(loginBtnClicked), for: .touchUpInside)
         return btn
     }()
+    
     /// 立即体验按钮
     public lazy var startButton: UIButton = {
         let btn = UIButton.init(type: .custom)
@@ -68,7 +68,16 @@ public class GuidePageView: UIView {
         btn.addTarget(self, action: #selector(startBtnClicked), for: .touchUpInside)
         return btn
     }()
+
+    /// 是否隐藏跳过按钮(true 隐藏; false 不隐藏)，default: false
+    private var isHiddenSkipBtn: Bool = false
     
+    /// 是否隐藏立即体验按钮(true 隐藏; false 不隐藏)，default: false
+    private var isHiddenStartBtn: Bool = false
+    
+    /// 数据源
+    private var imageArray: Array<String>?
+
     var startCompletion: (() -> ())?
     var loginCompletion: (() -> ())?
     let pageControlHeight: CGFloat = 40.0

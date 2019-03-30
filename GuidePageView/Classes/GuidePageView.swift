@@ -12,7 +12,7 @@ public class GuidePageView: UIView {
     
     private lazy var guideScrollView: UIScrollView = {
         let view = UIScrollView.init()
-        view.backgroundColor = UIColor.lightGray
+        view.backgroundColor = UIColor.clear
         view.bounces = false
         view.isPagingEnabled = true
         view.showsHorizontalScrollIndicator = false
@@ -68,7 +68,10 @@ public class GuidePageView: UIView {
         btn.addTarget(self, action: #selector(startBtnClicked), for: .touchUpInside)
         return btn
     }()
-
+    
+    /// 是否打开右滑进入主题，default: false
+    public var isSlipIntoHomeView: Bool = false
+    
     /// 是否隐藏跳过按钮(true 隐藏; false 不隐藏)，default: false
     private var isHiddenSkipBtn: Bool = false
     
@@ -77,12 +80,14 @@ public class GuidePageView: UIView {
     
     /// 数据源
     private var imageArray: Array<String>?
-
+    
     var startCompletion: (() -> ())?
     var loginCompletion: (() -> ())?
     let pageControlHeight: CGFloat = 40.0
     let startHeigth: CGFloat = 30.0
     let loginHeight: CGFloat = 40.0
+    /// 是否正在做滑入动作
+    private var isSliping: Bool = false
     
     // MARK: - life cycle
     private override init(frame: CGRect) {
@@ -113,7 +118,7 @@ public class GuidePageView: UIView {
         self.loginCompletion  = loginRegistCompletion
         
         setupSubviews(frame: frame)
-        self.backgroundColor = UIColor.lightGray
+        self.backgroundColor = UIColor.clear
     }
     
     required public init?(coder aDecoder: NSCoder) {
@@ -124,7 +129,7 @@ public class GuidePageView: UIView {
     private func setupSubviews(frame: CGRect) {
         let size = UIScreen.main.bounds.size
         guideScrollView.frame = frame
-        guideScrollView.contentSize = CGSize.init(width: frame.size.width * CGFloat(imageArray?.count ?? 0), height: frame.size.height)
+        guideScrollView.contentSize = CGSize.init(width: frame.size.width * CGFloat(imageArray?.count ?? 0) + 50.0, height: frame.size.height)
         self.addSubview(guideScrollView)
         
         skipButton.frame = CGRect.init(x: size.width - 70.0 , y: 40.0, width: 50.0, height: 24.0)
@@ -139,7 +144,7 @@ public class GuidePageView: UIView {
         for index in 0..<(imageArray?.count ?? 1) {
             let name        = imageArray![index]
             let imageFrame  = CGRect.init(x: size.width * CGFloat(index), y: 0.0, width: size.width, height: size.height)
-            let filePath    = Bundle.main.path(forResource: name, ofType: nil) ?? ""
+            let filePath    = Bundle.main.path(forResource: "Images/name", ofType: nil) ?? ""
             let data: Data? = try? Data.init(contentsOf: URL.init(fileURLWithPath: filePath), options: Data.ReadingOptions.uncached)
             var view: UIView
             let type = GifImageOperation.checkDataType(data: data)
@@ -241,6 +246,26 @@ public class GuidePageView: UIView {
 
 // MARK: - <UIScrollViewDelegate>
 extension GuidePageView: UIScrollViewDelegate {
+    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        guard isSlipIntoHomeView else { return }
+        guard isSliping == false else { return }
+        
+        let totalWidth = UIScreen.main.bounds.size.width * CGFloat((imageArray?.count ?? 1) - 1)
+        let offsetX = scrollView.contentOffset.x - totalWidth
+        if offsetX > 30 {
+            isSliping = true
+            UIView.animate(withDuration: 1.0, animations: {
+                self.guideScrollView.alpha = 0.0
+                var frame = self.guideScrollView.frame
+                frame.origin.x = -UIScreen.main.bounds.size.width
+                self.guideScrollView.frame = frame
+            }) { (_) in
+                self.isSliping = false
+                self.startBtnClicked()
+            }
+        }
+    }
+    
     public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let page: Int = Int(scrollView.contentOffset.x / scrollView.bounds.size.width)
         // 设置指示器

@@ -28,6 +28,7 @@ class ViewController: UIViewController {
         }) {
             print("开始使用app")
         }
+        guideView.isSlipIntoHomeView = true
         self.view.addSubview(guideView)
     }
 

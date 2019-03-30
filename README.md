@@ -11,8 +11,18 @@ App启动引导页，支持播放gif/png/jpg等类型的资源数组。
 >
 
 版本：
-- 1.0.0版本  Xcode 9+  Swift 4.0
+- 1.2.0版本  Xcode 10+  Swift 4.2
 - 1.1.0版本  Xcode 10+  Swift 4.1~4.2
+- 1.0.0版本  Xcode 9+  Swift 4.0
+
+
+## 最新版本`1.2.0`
+**新增右滑进入主题功能**
+```Swift
+
+/// 是否打开右滑进入主题，default: false
+public var isSlipIntoHomeView: Bool = false
+```
 
 ## Gif演示：
 
@@ -24,6 +34,10 @@ App启动引导页，支持播放gif/png/jpg等类型的资源数组。
 ### 实例化接口及可配置参数
 
 ```Swift
+
+/// 是否打开右滑进入主题，default: false
+public var isSlipIntoHomeView: Bool = false
+
 /// 指示器
 public lazy var pageControl: PageControl
 
@@ -53,12 +67,6 @@ public convenience init(frame: CGRect = UIScreen.main.bounds,
                         startCompletion: (() -> ())?)
 
 ```
-
-### 新增控件
-#### PageControl（指示器）
-- 通过(setImage:forState:)方法可以设置指示器的默认和选中样式；
-- 通过itemSpacing属性可以设置指示器之间的间距；
-- 。。。（具体的可看源码）
 
 ## Example
 

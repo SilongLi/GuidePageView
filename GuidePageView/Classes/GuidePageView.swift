@@ -144,7 +144,7 @@ public class GuidePageView: UIView {
         for index in 0..<(imageArray?.count ?? 1) {
             let name        = imageArray![index]
             let imageFrame  = CGRect.init(x: size.width * CGFloat(index), y: 0.0, width: size.width, height: size.height)
-            let filePath    = Bundle.main.path(forResource: "Images/name", ofType: nil) ?? ""
+            let filePath    = Bundle.main.path(forResource: name, ofType: nil) ?? ""
             let data: Data? = try? Data.init(contentsOf: URL.init(fileURLWithPath: filePath), options: Data.ReadingOptions.uncached)
             var view: UIView
             let type = GifImageOperation.checkDataType(data: data)

@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         // 引导页案例
 //        let gifArray = ["shopping.gif", "guideImage6.gif", "guideImage7.gif", "guideImage8.gif", "adImage3.gif", "adImage4.gif"]
 //        let imageArray = ["guideImage1.jpg", "guideImage2.jpg", "guideImage3.jpg", "guideImage4.jpg", "guideImage5.jpg"]
-        let imageGifArray = ["guideImage1.jpg","guideImage6.gif","guideImage7.gif","guideImage3.jpg", "guideImage5.jpg"]
+        var imageGifArray = ["guideImage1.jpg","guideImage6.gif","guideImage7.gif","guideImage3.jpg", "guideImage5.jpg"]
         let guideView = GuidePageView.init(images: imageGifArray, loginRegistCompletion: {
             print("登录/注册")
         }) {

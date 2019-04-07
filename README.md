@@ -1,6 +1,6 @@
 # GuidePageView 引导页组件
 ## 介绍
-App启动引导页，支持播放gif/png/jpg等类型的资源数组。
+App启动引导页，支持播放gif / png/ jpg等类型的资源数组。
 
 
 > Swift 4.2
